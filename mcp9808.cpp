@@ -21,7 +21,7 @@ bool MCP9808::isDetected(void)
 
 		id |= Wire.read(); // receive low byte as lower 8 bits
 	}
-	/*--If id is 1024 (0x400 in hex) sensor is detected*/
+	/*If id is 1024 (0x400 in hex) sensor is detected*/
 	if(id == 1024){
 		this->id = id;
 		return true;
