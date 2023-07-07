@@ -21,6 +21,7 @@
 /*--MCP9808 slave address--*/
 #define MCP9808_SLAVE_ADD 24
 
+/*--Class MCP9808--*/
 class MCP9808{
 	private:
 		int id = 0;
@@ -28,14 +29,14 @@ class MCP9808{
 		float temperature = 0.0;
 	public:
 		MCP9808();
-    void begin(void);
+		void begin(void);
 		bool isDetected(void);
 		void getRawTemp(void);
 		void calculateFloatTemp(void);
 		void setSleepMode(uint16_t cmd);
 		void setWakeUpMode(uint16_t cmd);
-    float getFloatTemp(void);
-    int getMCP9808id(void);
+		float getFloatTemp(void);
+		int getMCP9808id(void);
 		~MCP9808();
 
 
