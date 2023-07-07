@@ -89,7 +89,7 @@ void MCP9808::setSleepMode(uint16_t cmd)
 /*Wake up sensor from sleep mode*/
 void MCP9808::setWakeUpMode(uint16_t cmd)
 {
-    cmd = 0x0000; //cmd to wake up
+	cmd = 0x0000; //cmd to wake up
 	uint16_t buffToSend[2] ={MCP9808_REG_CFG,cmd}; 
 	Wire.beginTransmission(MCP9808_SLAVE_ADD);
 	Wire.write((uint8_t*)buffToSend,4);
